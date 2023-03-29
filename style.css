@@ -1,3 +1,9 @@
 body{background-color: blue;}
 h1{color: aquamarine;font-size: 100px;}
-h2{background-color: bisque;}
+h2{background-color: #f0f;}
+/* class */
+.elemento{color: aliceblue;}
+/* id */
+#titular{font-size: x-small; position: relative; left: 150px;}       
+/* para todo */
+*{border:1px solid #f0f;}
