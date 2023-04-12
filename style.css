@@ -1,13 +1,32 @@
-body{background-color: blue;}
-h1{color: aquamarine;font-size: 100px;}
-h2{background-color: #f0f;}
+body{
+    background-color: blue;
+}
+h1{
+    color: aquamarine;
+    font-size: 100px;
+}
+h2{
+    background-color: #f0f;
+}
 /* class */
-.elemento{color: aliceblue;}
+.elemento{
+    color: aliceblue;
+}
 /* id */
-#titular{font-size: x-small; position: relative; left: 150px;}       
+#titular{
+    font-size: x-small;
+    position: relative; 
+    left: 150px;
+}       
 /* para todo */
-*{border:1px solid #f0f;}
+*{
+    border:1px solid #f0f;
+}
 .divardo{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly; 
+    align-items: stretch;
     font-size: 40px;
     position: relative;
     left: 40px;
