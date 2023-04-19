@@ -15,6 +15,11 @@ h2{
     background-color: #fff;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+
 nav{
     display: grid;
     /* flex-direction: row; */
@@ -73,11 +78,9 @@ nav{
 }
 
 .grid{
-    grid-template-areas:
-    'j j j ' 
-    'fore fore fore fore';
+    border: 10px solid rgb(red, red, red);
     display: grid;
-    /* grid-template-columns: 25vw 25vw 25vw 25vw; */
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
     text-align: center;
     justify-content: space-evenly;
     align-content: flex-start;
@@ -86,11 +89,14 @@ nav{
     background-color: aquamarine;
     gap: 15px;
 }     
-.grid1{
-    grid-area: 'j';
-    /* grid-column: 1/span 2;
-} */
+.grid-item{
+    border: 1px solid rgba(0, 0, 0, 0.8);
+
 }
+.grid-item:hover{
+    scale: 1.1;
+}
+
 .grid2{
     grid-area: 'fore';
 }
@@ -109,4 +115,9 @@ nav{
     position: relative;
     left: 50vw;
     touch-action: manipulation;
+}
+img{
+
+    width: 100%;
+
 }
