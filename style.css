@@ -3,30 +3,25 @@ body{
     
     
 }
-h1{
-    color: black;
-    font-size: 100px;
-    top: 0%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(Imagenes/run.jpg);
+
     
-}
-h2{
+
+/* h2{
     background-color: #fff;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
-  }
+  } */
 
-nav{
+/* nav{
     display: grid;
     /* flex-direction: row; */
     /* justify-content: space-evenly; */
-    font-size: 35px;
+    /* font-size: 35px; */
 
-}
+
 /* .div1{
    
    
@@ -49,7 +44,7 @@ nav{
     
     position: relative;
 } */
-.box{
+/* .box{
     
     color: cadetblue;
 }
@@ -71,9 +66,9 @@ nav{
 }
 .h3{
     font-size: 50px;
-}
+} */
 /* class */
-.elemento{
+/* .elemento{
     color: aliceblue;
 }
 
@@ -99,10 +94,10 @@ nav{
 
 .grid2{
     grid-area: 'fore';
-}
+} */
 /* para todo */
 
-.divardo{
+/* .divardo{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-evenly; 
@@ -120,4 +115,4 @@ img{
 
     width: 100%;
 
-}
+} */
