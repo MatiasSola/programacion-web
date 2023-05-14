@@ -5,12 +5,22 @@ body{
 }
 header{
     margin-bottom: 6em;
-    background-color: rgb(58, 57, 62);
+    background-color: rgb(218, 216, 223);
     color: rgb(58, 57, 62);
     border-bottom: 1px;
-  }
+}
+.dropdown-menu{
+    background-color: rgb(193, 26, 26);
+}
 
-
+#deportes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  
+    
+}
 /* h2{
     background-color: #fff;
 }
