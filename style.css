@@ -4,7 +4,6 @@ body{
     
 }
 header{
-    margin-bottom: 6em;
     background-color: rgb(218, 216, 223);
     color: rgb(58, 57, 62);
     border-bottom: 1px;
@@ -14,12 +13,53 @@ header{
 }
 
 #deportes{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
     justify-content: space-around;
-  
+}
+#deportes img{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 28px;
     
+}
+
+.cardBorde {
+    border-style: none;
+    border: none;
+}
+.cardBorde img {
+    width: 250px;
+    height: 175px;
+    padding: 15px;
+    border-radius: 38px;
+}
+
+.navbar{
+    background-color: rgb(22, 24, 27);
+    display: flex;
+    position: sticky;
+    justify-content: left;
+    top: 0;
+    z-index: 999;
+    padding: 10px;
+
+}
+
+.background img{
+    background-image: url('./Imagenes/fondo\ de\ pagina2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    display: flex;
 }
 /* h2{
     background-color: #fff;
