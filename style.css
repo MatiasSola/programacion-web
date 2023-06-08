@@ -3,19 +3,16 @@ body{
     
 }
 
-.grid-container{
+.container{
     display: grid;
+    
 }
 
 nav{
     background-color: #000;
-}
-
-.container-nav{
-    display: flex;
-    justify-content: space-between;
     object-fit: cover;
 }
+
 
 .logo{
     padding-left: 30px;

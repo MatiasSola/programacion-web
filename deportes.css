@@ -1,0 +1,87 @@
+body{
+    background-color: black;
+    width: 100%;
+}
+
+
+nav{
+    background-color: #000000;
+    object-fit: cover;
+    display: flex;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 100px;
+    color: #f2f2f2;
+}
+
+.mapa-deportes,
+.noticias-deportes {
+  
+  padding: 30px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin: 30px;
+  height: 500px;
+  padding-bottom: 80px;
+  
+}
+
+.mapa-deportes h2,
+.noticias-deportes h2 {
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+.mapa-deportes img,
+.noticias-deportes img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.texto{
+    text-align: center;
+    font-size: 50px;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-group textarea {
+  height: 120px;
+}
+
+.form-group button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: #45a049;
+}
