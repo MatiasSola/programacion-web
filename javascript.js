@@ -1,62 +1,89 @@
-console.log("Hola")
+// console.log("Hola")
 
-for(let x=0; x < 10; x++){
-    console.log(x)
-}
+// for(let x=0; x < 10; x++){
+//     console.log(x)
+// }
 
-let array1 = [0,1,2,3]
-for( let x=0; x<4; x++){
-    console.log(array1[x])
-}
+// let array1 = [0,1,2,3]
+// for( let x=0; x<4; x++){
+//     console.log(array1[x])
+// }
 
-for(let x=0; x<array1.length; x++){
-    console.log(array1[x])
-}
+// for(let x=0; x<array1.length; x++){
+//     console.log(array1[x])
+// }
 
-function saludar_con_parametros (nombre){
-    return ("Hola " + nombre)
-}
-let nombre_usuario = prompt("Ingrese su nombre: ")
-function alertar (valor) {
-    alert (valor)
-}
+// function saludar_con_parametros (nombre){
+//     return ("Hola " + nombre)
+// }
+// let nombre_usuario = prompt("Ingrese su nombre: ")
+// function alertar (valor) {
+//     alert (valor)
+// }
 
-alertar (saludar_con_parametros(nombre_usuario))
+// alertar (saludar_con_parametros(nombre_usuario))
 
 function procesarFormulario(event) {
-    event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada
+  event.preventDefault();
+
+  // Obtener los valores del formulario
+  var nombre = document.getElementById("nombre").value;
+  var email = document.getElementById("email").value;
+  var deporte = document.getElementById("deporte").value;
+  var plan = document.getElementById("plan").value;
+
+  // Validar los valores del formulario
+  if (nombre === "" || email === "" || deporte === "" || plan === "") {
+      alert("Por favor, completa todos los campos del formulario.");
+      return false;
+  }
+
+  // Asignar nombres personalizados a los planes
+  var planNombre = "";
+  if (plan === "plan1") {
+      planNombre = "Plan Básico";
+  } else if (plan === "plan2") {
+      planNombre = "Plan Premium";
+  }
+
   
-    // Obtener los valores ingresados por el cliente
-    const nombre = document.getElementById('nombre').value;
-    const plan = document.getElementById('plan').value;
-    const deporte = document.getElementById('deporte').value;
-  
-    // Verificar si se llenaron todos los campos
-    if (!nombre || !plan || !deporte) {
-      mostrarMensaje('Necesitamos que llenes los datos para que puedas inscribirte correctamente');
-      return false; // Detener el envío del formulario
-    }
-  
-    // Generar el mensaje de inscripción exitosa
-    let planMensaje = '';
-    if (plan === 'plan1') {
-      planMensaje = 'básico';
-    } else if (plan === 'plan2') {
-      planMensaje = 'premium';
-    }
-  
-    const mensajeInscripcion = `Gracias ${nombre}, por inscribirte al plan ${planMensaje}.`;
-    const mensajeDeporte = `Tu inscripción a ${deporte} se ha realizado con éxito!`;
-    
-    mostrarMensaje(mensajeInscripcion);
-    mostrarMensaje(mensajeDeporte);
-  
-    return false; // Evitar el envío del formulario
+  var deporteNombre = "";
+  switch (deporte) {
+      case "boxeo":
+          deporteNombre = "Boxeo";
+          break;
+      case "esgrima":
+          deporteNombre = "Esgrima";
+          break;
+      case "kickboxing":
+          deporteNombre = "Kickboxing";
+          break;
+      case "judo":
+          deporteNombre = "Judo";
+          break;
+      case "karate":
+          deporteNombre = "Karate";
+          break;
+      case "muaythai":
+          deporteNombre = "Muay Thai";
+          break;
+      default:
+          deporteNombre = "Deporte desconocido";
+          break;
+  }
+  // Mostrar mensaje de éxito
+  var mensaje = "¡Gracias por inscribirte!\n\n";
+  mensaje += "Nombre: " + nombre + "\n";
+  mensaje += "Email: " + email + "\n";
+  mensaje += "Deporte: " + deporte + "\n";
+  mensaje += "Plan: " + planNombre + "\n";
+  alert(mensaje);
+
+  // Limpiar el formulario
+  document.getElementById("nombre").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("deporte").selectedIndex = 0;
+  document.getElementById("plan").selectedIndex = 0;
+
+  return false;
 }
-  
-function mostrarMensaje(mensaje) {
-    const mensajeDiv = document.createElement('div');
-    mensajeDiv.textContent = mensaje;
-    document.body.appendChild(mensajeDiv);
-}
-  
