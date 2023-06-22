@@ -45,14 +45,18 @@ function procesarFormulario(event) {
       planMensaje = 'premium';
     }
   
-    const mensaje = `Gracias ${nombre}, por inscribirte al plan ${planMensaje}.\nTu inscripción a ${deporte} se ha realizado con éxito!`;
-    mostrarMensaje(mensaje);
+    const mensajeInscripcion = `Gracias ${nombre}, por inscribirte al plan ${planMensaje}.`;
+    const mensajeDeporte = `Tu inscripción a ${deporte} se ha realizado con éxito!`;
+    
+    mostrarMensaje(mensajeInscripcion);
+    mostrarMensaje(mensajeDeporte);
   
-    return true; // Permitir el envío del formulario
+    return false; // Evitar el envío del formulario
 }
   
 function mostrarMensaje(mensaje) {
-    const mensajeDiv = document.getElementById('mensaje');
+    const mensajeDiv = document.createElement('div');
     mensajeDiv.textContent = mensaje;
+    document.body.appendChild(mensajeDiv);
 }
   
