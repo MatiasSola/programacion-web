@@ -26,19 +26,18 @@
 function procesarFormulario(event) {
   event.preventDefault();
 
-  // Obtener los valores del formulario
+
   var nombre = document.getElementById("nombre").value;
   var email = document.getElementById("email").value;
   var deporte = document.getElementById("deporte").value;
   var plan = document.getElementById("plan").value;
 
-  // Validar los valores del formulario
   if (nombre === "" || email === "" || deporte === "" || plan === "") {
       alert("Por favor, completa todos los campos del formulario.");
       return false;
   }
 
-  // Asignar nombres personalizados a los planes
+
   var planNombre = "";
   if (plan === "plan1") {
       planNombre = "Plan Básico";
@@ -46,32 +45,6 @@ function procesarFormulario(event) {
       planNombre = "Plan Premium";
   }
 
-  
-  var deporteNombre = "";
-  switch (deporte) {
-      case "boxeo":
-          deporteNombre = "Boxeo";
-          break;
-      case "esgrima":
-          deporteNombre = "Esgrima";
-          break;
-      case "kickboxing":
-          deporteNombre = "Kickboxing";
-          break;
-      case "judo":
-          deporteNombre = "Judo";
-          break;
-      case "karate":
-          deporteNombre = "Karate";
-          break;
-      case "muaythai":
-          deporteNombre = "Muay Thai";
-          break;
-      default:
-          deporteNombre = "Deporte desconocido";
-          break;
-  }
-  // Mostrar mensaje de éxito
   var mensaje = "¡Gracias por inscribirte!\n\n";
   mensaje += "Nombre: " + nombre + "\n";
   mensaje += "Email: " + email + "\n";
@@ -79,7 +52,7 @@ function procesarFormulario(event) {
   mensaje += "Plan: " + planNombre + "\n";
   alert(mensaje);
 
-  // Limpiar el formulario
+
   document.getElementById("nombre").value = "";
   document.getElementById("email").value = "";
   document.getElementById("deporte").selectedIndex = 0;
