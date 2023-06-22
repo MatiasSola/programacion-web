@@ -22,3 +22,37 @@ function alertar (valor) {
 }
 
 alertar (saludar_con_parametros(nombre_usuario))
+
+function procesarFormulario(event) {
+    event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada
+  
+    // Obtener los valores ingresados por el cliente
+    const nombre = document.getElementById('nombre').value;
+    const plan = document.getElementById('plan').value;
+    const deporte = document.getElementById('deporte').value;
+  
+    // Verificar si se llenaron todos los campos
+    if (!nombre || !plan || !deporte) {
+      mostrarMensaje('Necesitamos que llenes los datos para que puedas inscribirte correctamente');
+      return false; // Detener el envío del formulario
+    }
+  
+    // Generar el mensaje de inscripción exitosa
+    let planMensaje = '';
+    if (plan === 'plan1') {
+      planMensaje = 'básico';
+    } else if (plan === 'plan2') {
+      planMensaje = 'premium';
+    }
+  
+    const mensaje = `Gracias ${nombre}, por inscribirte al plan ${planMensaje}.\nTu inscripción a ${deporte} se ha realizado con éxito!`;
+    mostrarMensaje(mensaje);
+  
+    return true; // Permitir el envío del formulario
+}
+  
+function mostrarMensaje(mensaje) {
+    const mensajeDiv = document.getElementById('mensaje');
+    mensajeDiv.textContent = mensaje;
+}
+  
